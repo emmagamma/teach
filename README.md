@@ -153,6 +153,44 @@ git config --global user.name "Your Display Name"
 
 Doing these two things above will help github properly attribute your changes to you, and if you don't set it up to match github then you may notice some activity missing from your github profile, aka fewer little green squares.
 
+# (optional) Using the git plugin for Oh My Zsh
+
+If you also installed zsh and oh my zsh, you can use the git plugin by modifying your `~/.zshrc` file:
+
+```bash
+# modify the line containing plugins to include `git` among the other plugins (just a whitespace separated list, no commas)
+plugins=(... git ...)
+```
+
+then save your changes and run:
+
+```bash
+# this will re-run your zsh configuration in the current session
+# so that you don't have to open up a new terminal session to use your plugins
+source ~/.zshrc
+
+# this^ is similar to how you would re-run your `~/.bash_profile` or `~/.bashrc` file
+# which provide customization to your shell session each time you log in
+```
+
+you should now have a bunch of shorthand commands for git, so rather than using:
+
+```bash
+git status
+git add --all
+git diff --staged
+```
+
+you could simply run:
+
+```bash
+gst
+gaa
+gds
+```
+
+Refer to [this page](https://kapeli.com/cheat_sheets/Oh-My-Zsh_Git.docset/Contents/Resources/Documents/index) for a complete list of aliases, or simply type g and press tab to auto-complete, then add `-h` or `--help` to display information about a specific alias/command before running it.
+
 # Setting Up your Github SSH keys
 
 Don't worry if you're unsure what an SSH key is, we'll cover it in more depth later, but for now just know that properly configured SSH keys are more secure than passwords, and this will be how we authenticate with github so that we can push changes up to our repositories hosted there.
@@ -183,38 +221,10 @@ git init MyNewProject
 
 Or you can <a href="https://docs.github.com/en/get-started/quickstart/create-a-repo" target="_blank">create a repo on github</a> first and then pull it down to start making changes.
 
-Cheat Sheet with a buncha handy commands: <a href="https://training.github.com/downloads/github-git-cheat-sheet/" target="_blank">github + git cheat sheet</a>
+Here's a Cheat Sheet with a bunch of handy commands: <a href="https://training.github.com/downloads/github-git-cheat-sheet/" target="_blank">github + git cheat sheet</a>
 
-# Using the git plugin for Oh My Zsh
+---
 
-If you also installed zsh and oh my zsh, you can use the git plugin by modifying your `~/.zshrc` file:
+> Next Up: [Let's set up a new project and start tinkering!](NEWREPO.md)
 
-```bash
-# modify the line containing plugins to include `git` among the other plugins (just a whitespace separated list, no commas)
-plugins=(... git ...)
-
-# this will re-run your zsh configuration in the current session
-# so that you don't have to open up a new terminal session to use your plugins
-source ~/.zshrc
-
-# this^ is similar to how you would re-run your `~/.bash_profile` or `~/.bashrc` file
-# which provide customization to your shell session each time you log in
-```
-
-you should now have a bunch of shorthand commands for git, so rather than using:
-
-```bash
-git status
-git add --all
-git diff --staged
-```
-
-you could simply run:
-
-```bash
-gst
-gaa
-gds
-```
-
-Refer to [this page](https://kapeli.com/cheat_sheets/Oh-My-Zsh_Git.docset/Contents/Resources/Documents/index) for a complete list of aliases, or simply type g and press tab to auto-complete, then add `-h` or `--help` to display information about a specific alias/command before running it.
+---
