@@ -24,6 +24,8 @@ source ~/.bashrc
 source ~/.zshrc
 ```
 
+---
+
 ### file system and folder structures
 
 I've used the path `~/` several times now, so let's talk about what that means in bash. We'll come back to expand on what this means after filling in some related details, but for now I'll just mention that `~/` points to the home directory or home folder. 
@@ -45,6 +47,8 @@ L   Y  R  F
 Except in a file system, we have folders rather than just letters and those folders can contain files and other folders.
 Intuitively I think most of us know this but it helps to be explicit about things.
 Every file system, like every tree structure, has a root node or in the case of a folder structure a root folder.
+
+---
 
 ### change directory
 
@@ -97,6 +101,8 @@ to go up one level to the containing directory, we can use `../`
 cd ../
 ```
 
+---
+
 ### listing out the contents of the current directory
 
 the `ls` command, short for list, lets us see all the files and folders at our current location in the folder structure:
@@ -119,6 +125,8 @@ ls /etc/
 ls -al /etc/
 
 ```
+
+---
 
 ### make a new directory
 
