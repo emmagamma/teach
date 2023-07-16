@@ -20,6 +20,8 @@ wsl --install
 
 By default this will allow you act as if you're running Ubuntu, so you can follow any command line tutorial for something in Ubuntu and it should work fine. For more information about WSL check out [microsoft's WSL docs](https://learn.microsoft.com/en-us/windows/wsl/install).
 
+---
+
 ### on macOS:
 
 Already good to go, we should have a bash shell by default.
@@ -53,6 +55,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 # however you can do so manually like this
 chsh -s $(which zsh)
 ```
+
+---
 
 ### on Linux:
 
@@ -89,6 +93,7 @@ More details about installing [Zsh](https://www.tecmint.com/install-zsh-in-ubunt
 
 More details about installing [Oh My Zsh](https://www.tecmint.com/install-oh-my-zsh-in-ubuntu/).
 
+---
 
 # Getting Git
 
