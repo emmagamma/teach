@@ -2,6 +2,11 @@
 
 This guide assumes you know pretty much nothing about programming and seeks to take you through everything you'll need to get started with javaScript, HTML, and CSS as well as a number of other tangential tools and technologies that are widely used by professional software engineers. If you follow along, by the end you should have everything you need to start your first project and kick it's freakin ass.
 
+One of the handiest resources for familiarizing yourself with the command line is https://ss64.com which will give you a list of default commands available on your specific operating system. PowerShell is the default in windows, although now-a-days it's possible to run Bash in windows so that your environment functions similarly to Linux or macOS which both run Bash with a few minor variations.
+
+First there was the Bourne Shell, released in 1979 and it was widely replaced by Bash ten years later in 1989. Bash stands for Bourne Again Shell, and you can get a bit more history on [wikipedia](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) if you're into that sorta thing.
+
+
 # Getting your environment set up
 
 ### on Windows:
@@ -155,6 +160,10 @@ Luckily github provides some really thorough guides, so just follow each of thes
 
 Now all the git/github setup and configuration should be done, and you're ready to start creating new repos and submitting changes!
 
+However if you do run into issues with any of these steps, there should be plenty of folks who've run into the same thing before and already posted a solution. Just copy the important bits of text from the error you get, or try pasting the whole error message or just the error code into google. Knowing how to craft a google search that's likely to turn up results is one of the most important skills you can develop as a software engineer.
+
+One important thing to pay attention to is if an error message has any file paths in it, or file names or other variable names or function names that might be specific to your computer it could limit the results you get back unless you delete those parts before pasting it into google.
+
 # Creating your first git repository
 
 You can either create a repo just locally on your machine, by going to a new directory and using the command:
@@ -169,4 +178,38 @@ git init MyNewProject
 
 Or you can <a href="https://docs.github.com/en/get-started/quickstart/create-a-repo" target="_blank">create a repo on github</a> first and then pull it down to start making changes.
 
-Cheat Sheet with a buncha handy commands: <a href="https://training.github.com/downloads/github-git-cheat-sheet/" target="_blank">github git cheat sheet</a>
+Cheat Sheet with a buncha handy commands: <a href="https://training.github.com/downloads/github-git-cheat-sheet/" target="_blank">github + git cheat sheet</a>
+
+# Using the git plugin for Oh My Zsh
+
+If you also installed zsh and oh my zsh, you can use the git plugin by modifying your `~/.zshrc` file:
+
+```bash
+# modify the line containing plugins to include `git` among the other plugins (just a whitespace separated list, no commas)
+plugins=(... git ...)
+
+# this will re-run your zsh configuration in the current session
+# so that you don't have to open up a new terminal session to use your plugins
+source ~/.zshrc
+
+# this^ is similar to how you would re-run your `~/.bash_profile` or `~/.bashrc` file
+# which provide customization to your shell session each time you log in
+```
+
+you should now have a bunch of shorthand commands for git, so rather than using:
+
+```bash
+git status
+git add --all
+git diff --staged
+```
+
+you could simply run:
+
+```bash
+gst
+gaa
+gds
+```
+
+Refer to [this page](https://kapeli.com/cheat_sheets/Oh-My-Zsh_Git.docset/Contents/Resources/Documents/index) for a complete list of aliases, or simply type g and press tab to auto-complete, then add `-h` or `--help` to display information about a specific alias/command before running it.
