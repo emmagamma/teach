@@ -6,6 +6,7 @@ One of the handiest resources for familiarizing yourself with the command line i
 
 First there was the Bourne Shell, released in 1979 and it was widely replaced by Bash ten years later in 1989. Bash stands for Bourne Again Shell, and you can get a bit more history on [wikipedia](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) if you're into that sorta thing.
 
+<br />
 
 # Getting your environment set up
 
@@ -94,6 +95,8 @@ More details about installing [Zsh](https://www.tecmint.com/install-zsh-in-ubunt
 More details about installing [Oh My Zsh](https://www.tecmint.com/install-oh-my-zsh-in-ubuntu/).
 
 ---
+
+<br />
 
 # Getting Git
 
@@ -225,6 +228,6 @@ Here's a Cheat Sheet with a bunch of handy commands: <a href="https://training.g
 
 ---
 
-> Next Up: [Let's set up a new project and start tinkering!](NEWREPO.md)
+> Next Up: [Let's get familiar with Bash!](LEARNBASH.md)
 
 ---
