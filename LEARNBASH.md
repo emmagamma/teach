@@ -178,12 +178,39 @@ cd ~/Code/BabysFirstProject
 
 `pwd` : short for "Print (full path to the) Working Directory" and will give you the absolute path from root to wherever you currently are.
 
+```bash
+# just show the path of the current working directory that we're cd'd into
+pwd 
+
+# should give you an absolute path even if you use a relative path, like:
+pwd ./some/relative/path
+# /home/username/some/relative/path
+```
+
 ---
 
 `touch` : create a file.
 
 ```bash
 touch fileNameGoesHere.whatever
+```
+
+---
+
+`cat` : short for "Concatenate", print (display) the content of files
+
+```bash
+# list contents of one file
+cat ~/.zshrc
+
+# list contents of multiple files
+cat <file-path-one> <file-path-two> <file-path-three>
+
+# list contents of all text files
+cat *.txt
+
+# list contents of all files named thing, regardless of file extension
+cat thing.*
 ```
 
 ---
@@ -226,15 +253,77 @@ mv -i /some/path/* /some/newpath
 
 ---
 
+`rm` : short for "Remove", deletes files and folders. BE VEWY CAWEFUW!!
 
+```bash
+# for our example just to be safe let's create an empty file to delete
+touch things.stuff
 
+rm things.stuff
 
+# now let's create en empty directory and try deleting it
+mkdir emptyDir
 
+# when we try to delete a directory, we should get an error
+rm emptyDir
 
+# you just need to provide the flag -r to make it recursive
+rm -r emptyDir
 
+# but be very vareful, let's say you gave it the path ~/ it would delete your entire home directory
+# with all your files, apps, and everything else. or worse yet if you tried to rm / with the -r flag
+# it would delete your entire computer, and deletion is a very fast operation so even if you cancel
+# by using Ctrl + C (generally how to quit a command line program)
+# it'll still most likely have done too much damage to recover without reinstalling your entire OS
 
+# even more dangerous is the -f flag combined with -r
+rm -rf vewyVewyDangerous
 
+# -f means force, so it doesn't stop and trigger a confirmation step for protected files
+# it will just auto-agree to everything and keep deleting everything contained at the path you provided
+```
 
+---
 
+`chown` : short for "Change Owner", changes the owner of a file
 
+```bash
+chown username:groupname file-path.etc
 
+# or without the group is fine too, if you just want to change the owner
+chown username file-path.etc
+
+# to view the owner and group info use ls -l
+ls -l file-path.etc
+# -rw-r--r--  1 emma  staff  8342 Apr 20 06:09 file-path.etc
+
+# assuming `file-path.etc` exists, you should get output similar to the line above
+# in which, `emma` is the user and `staff` is the group
+```
+
+---
+
+`chmod` : short for "Change Mode", changes the file permissions to whatever you specify
+
+> More details about chmod, and a super handy permissions calculator: https://ss64.com/bash/chmod.html
+
+```bash
+# Allow everyone to read, write, and execute file
+chmod 777 file-path
+
+# Only allow the owner to read, write, and execute but don't let anyone else access the file at all
+chmod 700 file-path
+
+# Allow everyone to read the file
+chmod a+r file-path
+
+# add read and write for the user (owner) and the group, but not others
+chmod ug+rw file-path
+
+# deny execute permissions to everyone
+chmod a-x file-path
+
+# recursively set read and write permissions for everyone
+# on the entire contents of this folder and the folder itself
+chmod -R a+rw folder-path
+```
