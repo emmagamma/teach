@@ -24,7 +24,7 @@ source ~/.bashrc
 source ~/.zshrc
 ```
 
----
+<br />
 
 ## file system and folder structures
 
@@ -48,7 +48,7 @@ Except in a file system, we have folders rather than just letters and those fold
 Intuitively I think most of us know this but it helps to be explicit about things.
 Every file system, like every tree structure, has a root node or in the case of a folder structure a root folder.
 
----
+<br />
 
 ## change directory
 
@@ -101,7 +101,7 @@ to go up one level to the containing directory, we can use `../`
 cd ../
 ```
 
----
+<br />
 
 ## listing out the contents of the current directory
 
@@ -126,7 +126,7 @@ ls -al /etc/
 
 ```
 
----
+<br />
 
 ## make a new directory
 
