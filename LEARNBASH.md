@@ -10,7 +10,7 @@
 
 In the previous guide, we set up WSL for windows, meaning we can just use bash for all systems going forward rather than doing things in powershell separately.
 
-### bash configuration
+## bash configuration
 
 When you open a new terminal window, it should log in as your user and run your `~/.bash_profile` file which can contain bash code to configure your sessions. In addition each time you open a new tab it starts a new session logged in as your user, and will run your `~/.bashrc` which is very similar to your bash profile in that it can contain arbitrary bash code and further configures the same environment.
 
@@ -26,7 +26,7 @@ source ~/.zshrc
 
 ---
 
-### file system and folder structures
+## file system and folder structures
 
 I've used the path `~/` several times now, so let's talk about what that means in bash. We'll come back to expand on what this means after filling in some related details, but for now I'll just mention that `~/` points to the home directory or home folder. 
 
@@ -50,7 +50,7 @@ Every file system, like every tree structure, has a root node or in the case of 
 
 ---
 
-### change directory
+## change directory
 
 We can navigate to the root, the topmost level, where everything else about your system is contained, by running the following command:
 
@@ -103,7 +103,7 @@ cd ../
 
 ---
 
-### listing out the contents of the current directory
+## listing out the contents of the current directory
 
 the `ls` command, short for list, lets us see all the files and folders at our current location in the folder structure:
 
@@ -128,7 +128,7 @@ ls -al /etc/
 
 ---
 
-### make a new directory
+## make a new directory
 
 We can create a new directory with the `mkdir` command, short for "make directory",
 passing it a name for our folder afterwards, like so:
