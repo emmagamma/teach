@@ -150,10 +150,91 @@ I highly recommend keeping a folder to contain all your git repos in one place, 
 Now let's cd into our Code dir, and create another directory inside of it for your first project.
 
 ```bash
+# go into the Code folder
 cd Code
 
+# make a new folder
 mkdir BabysFirstProject
+
+# go into our new folder
+cd BabysFirstProject
 ```
+
+or instead you could do it in just two commands:
+
+```bash
+# make the new folder inside the Code folder
+mkdir ~/Code/BabysFirstProject
+
+# go into the new folder
+cd ~/Code/BabysFirstProject
+```
+
+<br />
+
+## other useful commands:
+
+---
+
+`pwd` : short for "Print (full path to the) Working Directory" and will give you the absolute path from root to wherever you currently are.
+
+---
+
+`touch` : create a file.
+
+```bash
+touch fileNameGoesHere.whatever
+```
+
+---
+
+`cp` : short for "Copy", give it two file paths separated by whitepsace to copy a file from the first path to the second path
+
+```bash
+# if the second path is just a directory, you can leave out the file name and it will default to the same file name
+cp fileNameGoesHere.whatever ~/Documents/
+
+# equivalent to above, but more verbose as we include the file name explicitly
+cp ./fileNameGoesHere.whatever ~/Documents/fileNameGoesHere.whatever
+
+# copy the contents of the file to a new file with a different name
+cp ./fileNameGoesHere.whatever ~/Documents/copyButChangeFile.name
+
+# use the -R flag to copy the entire contents of a folder to a new location
+cp -R <path-to-folder> <new-folder-path>
+```
+
+---
+
+`mv` : short for "Move", similar to copy except it removes the original file.
+
+```bash
+mv fileNameGoesHere.whatever ~/Documents/
+
+# equivalent to above, but more verbose as we include the file name explicitly
+mv ./fileNameGoesHere.whatever ~/Documents/fileNameGoesHere.whatever
+
+# move the file to a new location under a different filename, and remove the original
+mv ./fileNameGoesHere.whatever ~/Documents/copyButChangeFile.name
+
+# use the wildcard `*` to copy everything within that folder recursively to the new location
+mv /some/path/* /some/newpath
+
+# use the -i flag to have it ask before overwriting anything
+mv -i /some/path/* /some/newpath
+```
+
+---
+
+
+
+
+
+
+
+
+
+
 
 
 
