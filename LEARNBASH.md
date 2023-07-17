@@ -10,6 +10,10 @@
 
 In the previous guide, we set up WSL for windows, meaning we can just use bash for all systems going forward rather than doing things in powershell separately.
 
+Something worth noting about using bash, is that most of the time if a command is successful it won't generate any output at all. This may be a little confusing at first, but there are often other commands available to check on the results and verify that things worked as expected if you really need to. Generally speaking though, if there's an error it will be very obvious when the command terminates and spits out a bunch of text about what went wrong.
+
+Another thing to think about is that, often times typing commands slightly wrong could have very bad unintended consequences depending on what you're trying to do. As a rule of thumb I always sort of pause for a moment before pressing enter to actually run a command, I'll just scan it and verify that everything was typed correctly. You'll speed up as you get more familiar, but there's absolutely nothing wrong with taking your time and making 100% sure it's correct.
+
 ## bash configuration
 
 When you open a new terminal window, it should log in as your user and run your `~/.bash_profile` file which can contain bash code to configure your sessions. In addition each time you open a new tab it starts a new session logged in as your user, and will run your `~/.bashrc` which is very similar to your bash profile in that it can contain arbitrary bash code and further configures the same environment.
@@ -179,6 +183,32 @@ A list of all default commands in bash on linux can be seen here: https://ss64.c
 Or go to the main site and click on your OS to see a list of commands available to you: https://ss64.com/
 
 We'll highlight a few here and provide usage examples...
+
+---
+
+`man` : short for "Manual", prints out detailed documentation for a given command.
+
+```bash
+# yo dawg, did u know you can man the man command to see the manual page for the manual pages? lol
+man man
+
+# show manual page for whoami
+man whoami
+# WHOAMI(1)                                          General Commands Manual                                         WHOAMI(1)
+# NAME
+#      whoami – display effective user id
+# SYNOPSIS
+#      whoami
+# DESCRIPTION
+#      The whoami utility has been obsoleted by the id(1) utility, and is equivalent to “id -un”.  The command “id -p” is
+#      suggested for normal interactive use.
+#      The whoami utility displays your effective user ID as a name.
+# EXIT STATUS
+#      The whoami utility exits 0 on success, and >0 if an error occurs.
+# SEE ALSO
+#      id(1)
+```
+
 
 ---
 
@@ -388,11 +418,8 @@ sudo bash
 sudo rm passwordProtected.txt
 ```
 
+---
 
+> Next Up: [Lets dive into creating a website!](MAKEAWEBSITE.md)
 
-
-
-
-
-
-
+---
