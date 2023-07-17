@@ -174,6 +174,12 @@ cd ~/Code/BabysFirstProject
 
 ## other useful commands:
 
+A list of all default commands in bash on linux can be seen here: https://ss64.com/bash/
+
+Or go to the main site and click on your OS to see a list of commands available to you: https://ss64.com/
+
+We'll highlight a few here and provide usage examples...
+
 ---
 
 `pwd` : short for "Print (full path to the) Working Directory" and will give you the absolute path from root to wherever you currently are.
@@ -285,6 +291,14 @@ rm -rf vewyVewyDangerous
 
 ---
 
+`whoami` : lets you know which user you're logged in as.
+
+```bash
+whoami
+```
+
+---
+
 `chown` : short for "Change Owner", changes the owner of a file
 
 ```bash
@@ -327,3 +341,58 @@ chmod a-x file-path
 # on the entire contents of this folder and the folder itself
 chmod -R a+rw folder-path
 ```
+
+---
+
+`passwd` : set the password for the specified user, or the currently logged in user if none is provided.
+
+```bash
+# make sure we're signed in as the correct user
+whoami
+
+# calling passwd by itself will let you reset the password for the currently logged in user
+passwd
+
+# set the root password, or provide another username to set that user's password
+passwd root
+```
+
+---
+
+`su` : "Switch User", lets you attempt to log in as another user.
+
+```bash
+# login as root
+su root
+
+# you'll be asked for the password of the user you specify
+
+# if I were root and wanted to go back to my main user, emmagamma, I'd do this
+su emmagamma
+```
+
+---
+
+`sudo` : stands for "Super User Do", however it does not actually switch users permanently like `su` does, but rather only for a single command. So it's prepended before another command to give you elevated privileges. It lets anyone who's in the wheel group act *as if* they're root by providing their user's password. By default your user should already be in the wheel group on most distros, so sudo should work already for your user.
+
+```bash
+# one common example (not on macOS) would be using apt-get to install packages
+sudo apt-get install somePackage
+
+# without sudo it won't have the permissions required to make changes to your file system.
+
+# this is how you would start a new bash shell with root privileges
+sudo bash
+
+# sometimes sudo may be required to delete certain files
+sudo rm passwordProtected.txt
+```
+
+
+
+
+
+
+
+
+

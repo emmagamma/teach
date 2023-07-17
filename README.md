@@ -212,13 +212,13 @@ One important thing to pay attention to is if an error message has any file path
 
 # Creating your first git repository
 
-You can either create a repo just locally on your machine, by going to a new directory and using the command:
+You can either create a repo just locally on your machine, by cd-ing into a directory and using the `git init` command:
 
 ```bash
-# this assumes you're already inside the folder you want to use
+# this assumes you're already inside the folder you want to initialize as a git repo
 git init
 
-# you can also pass the name of the folder you want it to create and initialize
+# you can also pass a path to the folder you want it to initialize, instead of using the current working directory
 git init MyNewProject
 ```
 
@@ -228,6 +228,6 @@ Here's a Cheat Sheet with a bunch of handy commands: <a href="https://training.g
 
 ---
 
-> Next Up: [Let's get familiar with Bash!](LEARNBASH.md)
+> Next Up: [Let's get more familiar with Bash!](LEARNBASH.md)
 
 ---
