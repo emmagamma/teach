@@ -8,7 +8,7 @@
 
 # Simplest way to make a Website
 
-We don't need to create an HTML file seperately with, since `vi`, `vim`, `nano`, or `subl` will create the file for you if it doesn't already exist. But if you like you can create it first before opening it to modify.
+We don't need to create an HTML file seperately, since `vi`, `vim`, `nano`, or `subl` will create the file for you if it doesn't already exist. But if you like you can create it first before opening it to modify.
 
 `touch ~/Code/YourProjectDirectory/index.html`
 
@@ -52,7 +52,7 @@ But however you open it, modify the file's contents to be:
 
 And that's it, we've created our first website... well, kindof. lol
 
-It's not hosted anywhere, so nobody else will be able to view it, but we can simply open this file with our web browser of choice now and it will render a web page. Here's how you would open it in chrome whether you're on linux, macOS, or windows with WSL emabled:
+It's not hosted anywhere, so nobody else will be able to view it, but we can simply open this file with our web browser of choice now and it will render a web page. Here's how you would open it in chrome whether you're on linux, macOS, or windows with WSL enabled:
 
 `open -a "Google Chrome" ./index.html`
 
@@ -102,10 +102,11 @@ For now, the important things to note are that:
     * we have a <title\> element which sets the text in the browser tab for that page.
     * as well as <meta\> tags which can contain all sorts of metadata about our site.
     * and the <style\> element, although typically we would use a <link\> element instead with the css defined in a separate file.
-5. the <script\> tag usually has a `src` attribute on it, with the path to the javascript in another file, rather than defining the javascript "inline", meaning inside the HTML file.
-6. note that we place the <script\> tag at the end of the body, this is because often times our javascript will take some extra time to load, but we want the styles and contents to display to the user before the javascript has even loaded. If we were to instead place it inside the head, which is valid, it would (in most cases) have to load our javascript before rendering the contents of the body.
-7. the meta tag with `charset="utf-8"` lets anything parsing our file know that we're using unicode characters.
-8. the meta tag with `viewport` makes it so that on mobile devices things are scaled properly.
+5. the <body\> element contains all the elements that will be rendered to the page and show up visibly.
+6. the <script\> tag usually has a `src` attribute on it, with the path to the javascript in another file, rather than defining the javascript "inline", meaning inside the HTML file.
+7. note that we place the <script\> tag at the end of the body, this is because often times our javascript will take some extra time to load, but we want the styles and contents to display to the user before the javascript has even loaded. If we were to instead place it inside the head, which is valid, it would (in most cases) have to load our javascript before rendering the contents of the body.
+8. the meta tag with `charset="utf-8"` lets anything parsing our file know that we're using unicode characters.
+9. the meta tag with `viewport` makes it so that on mobile devices things are scaled properly.
 
 # Defining JS and CSS in separate files
 
