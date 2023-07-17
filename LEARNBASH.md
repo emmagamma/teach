@@ -18,13 +18,14 @@ Another thing to think about is that, often times typing commands slightly wrong
 
 When you open a new terminal window, it should log in as your user and run your `~/.bash_profile` file which can contain bash code to configure your sessions. In addition each time you open a new tab it starts a new session logged in as your user, and will run your `~/.bashrc` which is very similar to your bash profile in that it can contain arbitrary bash code and further configures the same environment.
 
-If you're using Zsh and Oh My Zsh, then your `~/.zshrc` file will also re-run each time you start a new session.
+If you're using Zsh and Oh My Zsh, then your `~/.zshrc` and `~/.zprofile` files will also re-run in a similar fashion.
 
 After making changes to these files, we can run any of the following commands to have that specific config file refresh in the current session instead of requiring us to open a new tab:
 
 ```bash
 source ~/.bash_profile
 source ~/.bashrc
+source ~/.zprofile
 source ~/.zshrc
 ```
 
