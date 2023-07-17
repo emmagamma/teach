@@ -2,7 +2,7 @@
 
 ---
 
-> [Get more familiar with bash](README.md)
+> [Get more familiar with bash](LEARNBASH.md)
 
 ---
 
