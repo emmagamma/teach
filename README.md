@@ -21,6 +21,8 @@ wsl --install
 
 By default this will allow you act as if you're running Ubuntu, so you can follow any command line tutorial for something in Ubuntu and it should work fine. For more information about WSL check out [microsoft's WSL docs](https://learn.microsoft.com/en-us/windows/wsl/install).
 
+Once you're running bash, take a look at the section for "on Linux" to make your terminal ~pretty~ and more functional.
+
 ---
 
 ### on macOS:
@@ -100,7 +102,7 @@ More details about installing [Oh My Zsh](https://www.tecmint.com/install-oh-my-
 
 # Getting Git
 
-Git is an absolutely crucial tool for any software engineer. there are alternatives but for the most part git is the defacto way to manage your code base and track changes over time non-destructively. Meaning when you delete a file or delete lines from a file, you can always just revert to a previous `commit` (a revision, or like, the latest edition) to get all the data back.
+Git is an absolutely crucial tool for any software engineer. there are alternatives but for the most part git is the defacto way to manage your code base and track changes over time non-destructively. Meaning when you delete a file or delete lines from a file, you can always just revert to a previous `commit` (a revision, or like, a previous version) to get all the data back.
 
 ### install git on macOS: 
 
@@ -114,7 +116,14 @@ brew install git
 sudo apt-get install git-all
 ```
 
-For more info about installing git you can also refer to [this guide](https://github.com/git-guides/install-git).
+If you run into an error on windows with WSL, you may need to install [git-scm](https://git-scm.com/download/win), instead of using `apt-get`.
+
+```bash
+# install git with winget via the command line, if you don't want to use the installer
+winget install --id Git.Git -e --source winget
+```
+
+For more info about installing git or git-scm for windows you can refer to [this guide](https://github.com/git-guides/install-git).
 
 #### Then we should be able to verify (for any OS) that git was installed correctly, with
 
@@ -148,7 +157,7 @@ Okay, so anyway now that you have your github account set up, you'll wanna use t
 git config --global user.email "your@email.com"
 ```
 
-Then you'll want user.name to match whatever you're using on github as your display name:
+Then replace "Your Display Name" with the same display name you're using on github, and run this command:
 
 ```bash
 git config --global user.name "Your Display Name"
