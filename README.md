@@ -21,7 +21,7 @@ wsl --install
 
 By default this will allow you act as if you're running Ubuntu, so you can follow any command line tutorial for something in Ubuntu and it should work fine. For more information about WSL check out [microsoft's WSL docs](https://learn.microsoft.com/en-us/windows/wsl/install).
 
-Once you're running bash, take a look at the section for "on Linux" to make your terminal ~pretty~ and more functional.
+Once you're running bash, take a look at the section for "on Linux" to make your terminal \~pretty\~ and more functional.
 
 ---
 
