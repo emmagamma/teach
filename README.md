@@ -63,7 +63,9 @@ chsh -s $(which zsh)
 
 ### on Linux:
 
-You can find alternatives for iTerm on linux, but Zsh and Oh My Zsh should both still work on most distros.
+You can find alternatives to iTerm 2 for linux like [Tilda](https://github.com/lanoxx/tilda), [Guake](https://github.com/Guake/guake), or [yakuake](https://github.com/KDE/yakuake).
+
+However Zsh and Oh My Zsh should both still work on most linux distros.
 
 For Ubuntu or any other OS with `apt` available, it would just be:
 
