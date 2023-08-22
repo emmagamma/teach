@@ -63,7 +63,7 @@ chsh -s $(which zsh)
 
 ### on Linux:
 
-You can find alternatives to iTerm 2 for linux like [Tilda](https://github.com/lanoxx/tilda), [Guake](https://github.com/Guake/guake), or [yakuake](https://github.com/KDE/yakuake).
+You can find alternatives to iTerm 2 for linux like [Tilda](https://github.com/lanoxx/tilda), [Guake](https://github.com/Guake/guake), or [Yakuake](https://github.com/KDE/yakuake).
 
 However Zsh and Oh My Zsh should both still work on most linux distros.
 
@@ -83,7 +83,7 @@ curl --version
 # `zsh: command not found: curl`
 # rather than a version and other info, then we need to install it
 
-# install curl
+# install curl so we can make web requests
 sudo apt install curl
 
 # install oh my zsh
